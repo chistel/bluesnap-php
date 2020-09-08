@@ -1,0 +1,33 @@
+{
+    "name": "chistel/bluesnap-php",
+    "description": "A PHP Library for the Bluesnap api",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/chistel/bluesnap-php",
+    "authors": [
+        {
+            "name": "Daniel Cox",
+            "email": "tdanielcox@gmail.com"
+        },
+        {
+            "name": "Chistel",
+            "email": "chistelbrown@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.0"
+
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.1"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "chistel\\": "src/"
+        }
+    }
+}
