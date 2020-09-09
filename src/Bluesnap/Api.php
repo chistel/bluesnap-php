@@ -1,15 +1,15 @@
 <?php
 
-namespace chistel\Bluesnap;
+namespace Chistel\Bluesnap;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Middleware;
-use chistel\Bluesnap\Exceptions\MissingFieldsException;
+use Chistel\Bluesnap\Exceptions\MissingFieldsException;
 use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class Api
- * @package chistel\Bluesnap
+ * @package Chistel\Bluesnap
  */
 class Api
 {

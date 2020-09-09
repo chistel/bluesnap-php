@@ -1,11 +1,11 @@
 <?php
 
-namespace chistel\Bluesnap\Models;
+namespace Chistel\Bluesnap\Models;
 
 
 /**
  * Class Ecp
- * @package chistel\Bluesnap\Models
+ * @package Chistel\Bluesnap\Models
  */
 class Ecp extends Model
 {

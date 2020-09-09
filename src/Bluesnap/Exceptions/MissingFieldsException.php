@@ -1,6 +1,6 @@
 <?php
 
-namespace chistel\Bluesnap\Exceptions;
+namespace Chistel\Bluesnap\Exceptions;
 
 class MissingFieldsException extends BluesnapException
 {

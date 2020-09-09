@@ -1,6 +1,6 @@
 <?php
 
-use chistel\Bluesnap\Models\VaultedShopper;
+use Chistel\Bluesnap\Models\VaultedShopper;
 
 /**
  * Class VaultedShopperController
@@ -14,7 +14,7 @@ class VaultedShopperController
    public function __construct()
    {
       $environment = 'sandbox'; // or 'production'
-      \chistel\Bluesnap\Bluesnap::init($environment, 'YOUR_API_KEY', 'YOUR_API_PASSWORD');
+      \Chistel\Bluesnap\Bluesnap::init($environment, 'YOUR_API_KEY', 'YOUR_API_PASSWORD');
    }
 
    /**
@@ -24,7 +24,7 @@ class VaultedShopperController
     */
    public function createVaultedShopper()
    {
-      $response = \chistel\Bluesnap\VaultedShopper::create([
+      $response = \Chistel\Bluesnap\VaultedShopper::create([
          'firstName' => 'John',
          'lastName' => 'Smith',
       ]);
@@ -46,7 +46,7 @@ class VaultedShopperController
     */
    public function getVaultedShopper($vaulted_shopper_id)
    {
-      $response = \chistel\Bluesnap\VaultedShopper::get($vaulted_shopper_id);
+      $response = \Chistel\Bluesnap\VaultedShopper::get($vaulted_shopper_id);
 
       if ($response->failed()) {
          $error = $response->data;
@@ -64,7 +64,7 @@ class VaultedShopperController
     */
    public function getAllVaultedShoppers()
    {
-      $response = \chistel\Bluesnap\VaultedShopper::get();
+      $response = \Chistel\Bluesnap\VaultedShopper::get();
 
       return $response->data;
    }
@@ -96,7 +96,7 @@ class VaultedShopperController
          ]
       ];
 
-      $response = \chistel\Bluesnap\VaultedShopper::update($vaulted_shopper_id, $vaulted_shopper);
+      $response = \Chistel\Bluesnap\VaultedShopper::update($vaulted_shopper_id, $vaulted_shopper);
 
       if ($response->failed()) {
          $error = $response->data;

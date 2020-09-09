@@ -1,10 +1,10 @@
 <?php
 
-namespace chistel\Bluesnap\Models;
+namespace Chistel\Bluesnap\Models;
 
 /**
  * Class BillingContactInfo
- * @package chistel\Bluesnap\Models
+ * @package Chistel\Bluesnap\Models
  */
 class BillingContactInfo extends Model
 {

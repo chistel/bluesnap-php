@@ -1,10 +1,10 @@
 <?php
 
-namespace chistel\Bluesnap\Models;
+namespace Chistel\Bluesnap\Models;
 
 /**
  * Class PaymentSource
- * @package chistel\Bluesnap\Models
+ * @package Chistel\Bluesnap\Models
  */
 class PaymentSource extends Model
 {

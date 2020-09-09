@@ -1,6 +1,6 @@
 <?php
 
-use chistel\Bluesnap\Models\Vendor;
+use Chistel\Bluesnap\Models\Vendor;
 
 /**
  * Class VendorController
@@ -14,7 +14,7 @@ class VendorController
    public function __construct()
    {
       $environment = 'sandbox'; // or 'production'
-      \chistel\Bluesnap\Bluesnap::init($environment, 'YOUR_API_KEY', 'YOUR_API_PASSWORD');
+      \Chistel\Bluesnap\Bluesnap::init($environment, 'YOUR_API_KEY', 'YOUR_API_PASSWORD');
    }
 
    /**
@@ -24,7 +24,7 @@ class VendorController
     */
    public function createVendor()
    {
-      $response = \chistel\Bluesnap\Vendor::create([
+      $response = \Chistel\Bluesnap\Vendor::create([
          'email' => 'vendoremail@example.com',
          'country' => 'US'
       ]);
@@ -46,7 +46,7 @@ class VendorController
     */
    public function getVendor(int $vendor_id)
    {
-      $response = \chistel\Bluesnap\Vendor::get($vendor_id);
+      $response = \Chistel\Bluesnap\Vendor::get($vendor_id);
 
       if ($response->failed()) {
          $error = $response->data;
@@ -64,7 +64,7 @@ class VendorController
     */
    public function getAllVendors()
    {
-      $response = \chistel\Bluesnap\Vendor::get();
+      $response = \Chistel\Bluesnap\Vendor::get();
 
       return $response->data;
    }

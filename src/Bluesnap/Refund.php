@@ -1,10 +1,10 @@
 <?php
 
-namespace chistel\Bluesnap;
+namespace Chistel\Bluesnap;
 
 /**
  * Class Refund
- * @package chistel\Bluesnap
+ * @package Chistel\Bluesnap
  */
 class Refund
 {

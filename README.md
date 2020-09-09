@@ -17,7 +17,7 @@ At the moment, library currently supports:
 Install this package with composer
 
 ```shell
-composer require chistel/bluesnap-php
+composer require chistel/bluesnap_php
 ```
 
 ### Usage
@@ -28,7 +28,7 @@ Initialize the library in your class constructor
 public function __construct()
 {
     $environment = 'sandbox'; // or 'production'
-    \chistel\Bluesnap\Bluesnap::init($environment, 'YOUR_API_KEY', 'YOUR_API_PASSWORD');
+    \Chistel\Bluesnap\Bluesnap::init($environment, 'YOUR_API_KEY', 'YOUR_API_PASSWORD');
 }
 ```
 
@@ -37,7 +37,7 @@ Create a New Transaction
 ```php
 public function createTransaction()
 {
-    $response = \chistel\Bluesnap\CardTransaction::create([
+    $response = \Chistel\Bluesnap\CardTransaction::create([
         'creditCard' => [
             'cardNumber' => '4263982640269299',
             'expirationMonth' => '02',

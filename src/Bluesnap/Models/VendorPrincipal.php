@@ -1,10 +1,10 @@
 <?php
 
-namespace chistel\Bluesnap\Models;
+namespace Chistel\Bluesnap\Models;
 
 /**
  * Class VendorPrincipal
- * @package chistel\Bluesnap\Models
+ * @package Chistel\Bluesnap\Models
  */
 class VendorPrincipal extends Model
 {

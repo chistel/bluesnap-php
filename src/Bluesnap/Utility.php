@@ -1,6 +1,6 @@
 <?php
 
-namespace chistel\Bluesnap;
+namespace Chistel\Bluesnap;
 
 class Utility
 {
@@ -57,7 +57,7 @@ class Utility
    public static function setupModel($model, $data, $is_collection = false, $target_parameter = null)
    {
       $data = self::objectToArray($data);
-      $class_path = '\chistel\Bluesnap\Models\\' . $model;
+      $class_path = '\Chistel\Bluesnap\Models\\' . $model;
 
       if ($is_collection) {
          $target = $target_parameter ? $data[$target_parameter] : $data;

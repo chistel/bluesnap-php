@@ -1,12 +1,12 @@
 <?php
 
-namespace chistel\Bluesnap\Models;
+namespace Chistel\Bluesnap\Models;
 
-use chistel\Bluesnap\Utility;
+use Chistel\Bluesnap\Utility;
 
 /**
  * Class Model
- * @package chistel\Bluesnap\Models
+ * @package Chistel\Bluesnap\Models
  */
 class Model
 {

@@ -1,6 +1,6 @@
 <?php
 
-use chistel\Bluesnap\Models\Report;
+use Chistel\Bluesnap\Models\Report;
 
 class ReportController
 {
@@ -11,7 +11,7 @@ class ReportController
    public function __construct()
    {
       $environment = 'sandbox'; // or 'production'
-      \chistel\Bluesnap\Bluesnap::init($environment, 'YOUR_API_KEY', 'YOUR_API_PASSWORD');
+      \Chistel\Bluesnap\Bluesnap::init($environment, 'YOUR_API_KEY', 'YOUR_API_PASSWORD');
    }
 
    /**
@@ -22,7 +22,7 @@ class ReportController
    public function getReport()
    {
       // pass query parameters as array
-      $response = \chistel\Bluesnap\Report::get('TransactionDetail', [
+      $response = \Chistel\Bluesnap\Report::get('TransactionDetail', [
          'period' => 'THIS_MONTH'
       ]);
 

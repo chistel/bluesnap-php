@@ -1,11 +1,11 @@
 <?php
 
-namespace chistel\Bluesnap;
+namespace Chistel\Bluesnap;
 
 
 /**
  * Class Report
- * @package chistel\Bluesnap
+ * @package Chistel\Bluesnap
  */
 class Report
 {

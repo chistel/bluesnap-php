@@ -1,8 +1,8 @@
 <?php
 
-namespace chistel\Bluesnap;
+namespace Chistel\Bluesnap;
 
-use chistel\Bluesnap\Exceptions\BluesnapException;
+use Chistel\Bluesnap\Exceptions\BluesnapException;
 use GuzzleHttp\Exception\ClientException;
 
 /**

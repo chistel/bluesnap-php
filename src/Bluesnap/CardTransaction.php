@@ -1,10 +1,10 @@
 <?php
 
-namespace chistel\Bluesnap;
+namespace Chistel\Bluesnap;
 
 /**
  * Class CardTransaction
- * @package chistel\Bluesnap
+ * @package Chistel\Bluesnap
  */
 class CardTransaction
 {

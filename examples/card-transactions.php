@@ -1,7 +1,7 @@
 <?php
 
-use chistel\Bluesnap\Models\CardTransaction;
-use chistel\Bluesnap\Models\Refund;
+use Chistel\Bluesnap\Models\CardTransaction;
+use Chistel\Bluesnap\Models\Refund;
 
 class CardTransactionController
 {
@@ -12,7 +12,7 @@ class CardTransactionController
    public function __construct()
    {
       $environment = 'sandbox'; // or 'production'
-      \chistel\Bluesnap\Bluesnap::init($environment, 'YOUR_API_KEY', 'YOUR_API_PASSWORD');
+      \Chistel\Bluesnap\Bluesnap::init($environment, 'YOUR_API_KEY', 'YOUR_API_PASSWORD');
    }
 
 
@@ -23,7 +23,7 @@ class CardTransactionController
     */
    public function createTransaction()
    {
-      $response = \chistel\Bluesnap\CardTransaction::create([
+      $response = \Chistel\Bluesnap\CardTransaction::create([
          'creditCard' => [
             'cardNumber' => '4263982640269299',
             'expirationMonth' => '02',
@@ -56,7 +56,7 @@ class CardTransactionController
     */
    public function authorizeTransaction(int $vaulted_shopper_id, int $vendor_id)
    {
-      $response = \chistel\Bluesnap\CardTransaction::create([
+      $response = \Chistel\Bluesnap\CardTransaction::create([
          'vendorInfo' => [
             'vendorId' => $vendor_id,
             'commissionAmount' => 4.00,
@@ -91,7 +91,7 @@ class CardTransactionController
     */
    public function captureTransaction(int $transaction_id)
    {
-      $response = \chistel\Bluesnap\CardTransaction::update($transaction_id, [
+      $response = \Chistel\Bluesnap\CardTransaction::update($transaction_id, [
          'transactionId' => $transaction_id,
          'cardTransactionType' => 'CAPTURE',
       ]);
@@ -113,7 +113,7 @@ class CardTransactionController
     */
    public function getTransaction(int $transaction_id)
    {
-      $response = \chistel\Bluesnap\CardTransaction::get($transaction_id);
+      $response = \Chistel\Bluesnap\CardTransaction::get($transaction_id);
 
       if ($response->failed()) {
          $error = $response->data;
@@ -131,7 +131,7 @@ class CardTransactionController
     */
    public function getAllTransactions()
    {
-      $response = \chistel\Bluesnap\CardTransaction::get();
+      $response = \Chistel\Bluesnap\CardTransaction::get();
 
       return $response->data;
    }
@@ -145,7 +145,7 @@ class CardTransactionController
    public function refundTransaction(int $transaction_id)
    {
       // Pass query parameters as array
-      $response = \chistel\Bluesnap\Refund::update($transaction_id, [
+      $response = \Chistel\Bluesnap\Refund::update($transaction_id, [
          'amount' => 10.00,
          'reason' => 'Your refund description'
       ]);

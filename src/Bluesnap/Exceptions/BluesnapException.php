@@ -1,13 +1,13 @@
 <?php
 
-namespace chistel\Bluesnap\Exceptions;
+namespace Chistel\Bluesnap\Exceptions;
 
 use Exception;
-use chistel\Bluesnap\Contracts\ExceptionInterface;
+use Chistel\Bluesnap\Contracts\ExceptionInterface;
 
 /**
  * Class BluesnapException
- * @package chistel\Bluesnap\Exceptions
+ * @package Chistel\Bluesnap\Exceptions
  */
 abstract class BluesnapException extends Exception implements ExceptionInterface
 {

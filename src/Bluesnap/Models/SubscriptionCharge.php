@@ -1,6 +1,6 @@
 <?php
 
-namespace chistel\Bluesnap\Models;
+namespace Chistel\Bluesnap\Models;
 
 
 class SubscriptionCharge extends Model
